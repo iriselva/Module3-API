@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Spartan&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>API</title>
+</head>
+<body>
+
+<nav class="nav">
+    <img src="images/leaflogo.svg" alt="">
+    <ul>
+        <li><a href="#" class="nav-link" data-target="home">Home</a></li>
+        <li><a href="#" class="nav-link" data-target="plants">Plants</a></li>
+        <li><a href="#" class="nav-link" data-target="favorites">Favorites</a></li>
+    </ul>
+</nav>
+
+    <main id="app">
+        
+        <div class="page active" id="home">
+            <h2>Welcome to Leaf</h2>
+            <h3>Here you can learn plant names and save your favorites!</h3>
+            <img src="images/monstera.jpg" alt="monstera">
+        </div>
+        
+        <div class="page" id="plants">
+            <h2>Plants</h2>
+            <div class="plant-info" id="plants-container">
+            </div>
+        </div>
+
+        <div class="page" id="favorites">
+            <h2>Favorites</h2>
+            <div class="plant-info" id="favorites-container">
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

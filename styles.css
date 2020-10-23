@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    height: 100%;
+}
+
+.page {
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.active {
+    display: block;
+}
+
+h2 {
+    font-size: 3rem;
+    padding: 10px 0 10px 0;
+}
+
+h3 {
+    padding: 8px 0 8px 4px;
+}
+
+#home {
+    text-align: justify;
+}
+
+#home img {
+    opacity: 0.5;
+}
+
+/* kjnjl */
+
+body {
+    --nav-width: 200px;
+    margin: 0 0 0 var(--nav-width);
+    font-size: 18px;
+    font-family: 'Spartan', sans-serif;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--nav-width);
+    height: 100vh;
+    background: rgb(53, 87, 88);
+    padding-top: 60px;
+}
+
+.nav img {
+    width: 80px;
+    height: 80px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.nav-link {
+    display: block;
+    padding: 12px 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Spartan', sans-serif;
+    color: #eeeeee;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+#app {
+    margin: 2em;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+a {
+    color: #009579;
+}
+
+.plant-info {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.plant-card {
+    text-align: justify;
+    position: relative;
+    font-family: 'Spartan', sans-serif;
+    box-shadow: 0 2px 4px 0 lightgray;
+}
+
+.plant-card button {
+    text-align: end;
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 0 6px 0 6px;
+    background-color: white;
+    color: rgb(53, 87, 88);
+    border: 1px solid rgb(53, 87, 88);
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.plant-card button:hover {
+    color: white;
+    border: none;
+    background:  rgb(53, 87, 88);
+
+}
+
+.plant-card img {
+    width: 200px;
+    height: 200px;
+}
