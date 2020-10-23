@@ -1,11 +1,28 @@
+/* Main content */
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+body {
+    --nav-width: 200px;
+    margin: 0 0 0 var(--nav-width);
+    font-size: 18px;
+    font-family: 'Spartan', sans-serif;
+}
+
+/* Pages */
+
 .main {
     height: 100%;
+}
+
+#app {
+    margin: 2em;
+    line-height: 1.5;
+    font-weight: 500;
 }
 
 .page {
@@ -15,10 +32,13 @@
     overflow: visible;
 }
 
+/* class for making pages visible */
 .active {
     display: block;
 }
 
+
+/* Heading */
 h2 {
     font-size: 3rem;
     padding: 10px 0 10px 0;
@@ -28,23 +48,7 @@ h3 {
     padding: 8px 0 8px 4px;
 }
 
-#home {
-    text-align: justify;
-}
-
-#home img {
-    opacity: 0.5;
-}
-
-/* kjnjl */
-
-body {
-    --nav-width: 200px;
-    margin: 0 0 0 var(--nav-width);
-    font-size: 18px;
-    font-family: 'Spartan', sans-serif;
-}
-
+/* Navbar */
 .nav {
     position: fixed;
     top: 0;
@@ -76,16 +80,16 @@ body {
     background: rgba(255, 255, 255, 0.05);
 }
 
-#app {
-    margin: 2em;
-    line-height: 1.5;
-    font-weight: 500;
+/* Home page */
+#home {
+    text-align: justify;
 }
 
-a {
-    color: #009579;
+#home img {
+    opacity: 0.5;
 }
 
+/* Plant page */
 .plant-info {
     display: grid;
     grid-template-columns: 200px 200px 200px;

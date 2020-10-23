@@ -1,5 +1,7 @@
 let favorites = JSON.parse(localStorage.getItem('favoritePlants') || '[]');
 
+
+/* Making the site a single page appilcation */
 const app = {
     pages: [],
     // to say when the page has been shown we dispatch the event 
@@ -49,7 +51,7 @@ const app = {
 // when everything has been read call the app.init function
 document.addEventListener('DOMContentLoaded', app.init);
 
-// List up all available plants
+// Listing up all available plant objects in an array
 let plants = [
     {
         id: 'aloe',
@@ -83,9 +85,11 @@ let plants = [
     }
 ];
 
+/* Containers for pages */
 const plantsContainer = document.getElementById('plants-container');
 const favoritesContainer = document.getElementById('favorites-container');
 
+/* Creating a plant div and giving them id */
 const createPlant = (plantId) => {
     const plantEl = document.createElement('div');
     plantEl.className = 'plant-card';
@@ -95,6 +99,7 @@ const createPlant = (plantId) => {
     return plantEl;
 }
 
+/* creating the image */
 const createImg = (src, alt) => {
     const img = document.createElement('img');
     img.src = src;
@@ -102,12 +107,14 @@ const createImg = (src, alt) => {
     return img;
 }
 
+/* creating the title */
 const createTitle = (name) => {
     const title = document.createElement('h3');
     title.innerHTML = name;
     return title;
 }
 
+/* creating the button */
 const createButton = (id, text, onClick) => {
     const button = document.createElement('button');
     button.id = id;
@@ -116,13 +123,14 @@ const createButton = (id, text, onClick) => {
     return button;
 }
 
+/* Rendering favorite plants */
 const renderFavoritePlant = (plantId) => {
     // Find favorite plant from plant list
     const favoritePlant = plants.find(plant => plant.id == plantId);
     
     // Only render favorite plant if it exists
     if (favoritePlant) {
-        // Create plant el 
+        // Create plant element
         const favEl = createPlant(plantId);
 
         // Create all child elements for plant
@@ -140,10 +148,12 @@ const renderFavoritePlant = (plantId) => {
     }
 }
 
+/* Removing favorite plant */
 const removeFavoritePlant = (plantId) => {
     document.getElementById(`plant-${plantId}`).remove();
 }
 
+/* If the id istargetet place them in localstorage */
 const addToFavorites = (event) => {
     const plantId = event.target.getAttribute('id');
     if (!favorites.includes(plantId)) {
@@ -156,12 +166,15 @@ const addToFavorites = (event) => {
 const removeFromFavorites = (event) => {
     const plantId = event.target.getAttribute('id');
     if (favorites.includes(plantId)) {
+        // making sure the id is not repeated
         favorites = favorites.filter(id => id !== plantId);
         localStorage.setItem('favoritePlants', JSON.stringify(favorites))
         removeFavoritePlant(plantId);
     }
 }
 
+
+/* Creating each plant elemet */
 plants.forEach(plant => {
     // Create plan el
     const plantEl = createPlant();
